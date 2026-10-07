@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://problem2app.shop/sitemap.xml
