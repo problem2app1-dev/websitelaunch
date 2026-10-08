@@ -5,6 +5,7 @@
   "outputDirectory": "dist/public",
   "functions": { "api/*.ts": { "maxDuration": 30 } },
   "rewrites": [
+    { "source": "/about", "destination": "/index.html" },
     { "source": "/examples", "destination": "/index.html" },
     { "source": "/examples/:path*", "destination": "/index.html" }
   ]
