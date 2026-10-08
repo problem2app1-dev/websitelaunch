@@ -48,6 +48,7 @@ const links = [
   { label: "What we build", href: "/#automations" },
   { label: "Try the demos", href: "/examples" },
   { label: "Why us", href: "/#approach" },
+  { label: "About", href: "/#about" },
 ];
 export function Header() {
   const [open, setOpen] = useState(false);
