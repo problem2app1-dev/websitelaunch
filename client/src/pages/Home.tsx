@@ -7,6 +7,7 @@ import {
   Fingerprint,
   Headphones,
   LockKeyhole,
+  Linkedin,
   MoveUpRight,
   MousePointer2,
   ShieldCheck,
@@ -275,6 +276,63 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </Reveal>
+      </section>
+      <section className="about-section container" id="about">
+        <Reveal className="about-panel">
+          <div className="founder-portrait">
+            <img
+              src="/prathamesh-chandak.png"
+              alt="Prathamesh Chandak, founder of Problem2App"
+              loading="lazy"
+              width="800"
+              height="800"
+            />
+            <span className="founder-caption">Founder-led. Built hands-on.</span>
+          </div>
+          <div className="about-copy">
+            <p className="eyebrow">MEET THE FOUNDER</p>
+            <h2>
+              The person behind
+              <br />
+              Problem2App.
+            </h2>
+            <p className="founder-intro">
+              Prathamesh Chandak is building Problem2App around the work that
+              rarely makes the pitch deck: missed follow-ups, repeated data
+              entry and the spreadsheet somebody has to update every evening.
+            </p>
+            <p>
+              His background spans AI agents, automation, content and talent
+              strategy—experience that keeps every build grounded in how real
+              teams actually work.
+            </p>
+            <dl className="founder-proof" aria-label="Founder experience">
+              <div>
+                <dt>900M+</dt>
+                <dd>views generated</dd>
+              </div>
+              <div>
+                <dt>120+</dt>
+                <dd>global clients</dd>
+              </div>
+              <div>
+                <dt>150+</dt>
+                <dd>creator network</dd>
+              </div>
+            </dl>
+            <a
+              className="linkedin-link"
+              href="https://www.linkedin.com/in/prathameshchandak/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Linkedin size={18} aria-hidden="true" />
+              Connect with Prathamesh on LinkedIn
+              <ArrowUpRight size={16} aria-hidden="true" />
+              <span className="sr-only"> (opens in a new tab)</span>
+            </a>
           </div>
         </Reveal>
       </section>
