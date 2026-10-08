@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import { bookingUrl, contactEmail } from "@/lib/site";
 export function Brand() {
@@ -48,9 +48,10 @@ const links = [
   { label: "What we build", href: "/#automations" },
   { label: "Try the demos", href: "/examples" },
   { label: "Why us", href: "/#approach" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
 ];
 export function Header() {
+  const [location] = useLocation();
   const [open, setOpen] = useState(false);
   const toggle = useRef<HTMLButtonElement>(null);
   useEffect(() => {
@@ -76,7 +77,11 @@ export function Header() {
         <Brand />
         <nav className="desktop-nav" aria-label="Main navigation">
           {links.map(l => (
-            <a key={l.href} href={l.href}>
+            <a
+              key={l.href}
+              href={l.href}
+              aria-current={location === l.href ? "page" : undefined}
+            >
               {l.label}
             </a>
           ))}
@@ -103,7 +108,12 @@ export function Header() {
           aria-label="Mobile navigation"
         >
           {links.map(l => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)}>
+            <a
+              key={l.href}
+              href={l.href}
+              aria-current={location === l.href ? "page" : undefined}
+              onClick={() => setOpen(false)}
+            >
               {l.label}
               <ArrowUpRight size={18} />
             </a>
