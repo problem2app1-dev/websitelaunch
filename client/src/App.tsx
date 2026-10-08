@@ -1,5 +1,6 @@
 import { lazy, Suspense, useEffect } from "react";
 import { Route, Switch, useLocation } from "wouter";
+import { Analytics } from "@vercel/analytics/react";
 import ErrorBoundary from "./components/ErrorBoundary";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
@@ -41,6 +42,7 @@ export default function App() {
           <Route component={NotFound} />
         </Switch>
       </Suspense>
+      <Analytics />
     </ErrorBoundary>
   );
 }
